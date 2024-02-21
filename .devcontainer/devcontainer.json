@@ -1,0 +1,30 @@
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/devcontainers/python:1-3.11-bookworm",
+
+	"features": {
+		"github-cli": "latest",
+		"python": {
+			"version": "3.11"
+		}
+	},
+
+	"postCreateCommand": "pip3 install -r requirements.txt",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-toolsai.jupyter"
+			],
+			"settings": {
+				"python.pythonPath": "/usr/local/bin/python",
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": true,
+				"python.formatting.autopep8Path": "autopep8",
+				"python.formatting.blackPath": "black",
+				"python.formatting.provider": "black"
+			}
+		}
+	}
+}
